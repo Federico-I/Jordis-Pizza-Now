@@ -1,5 +1,7 @@
-// Test ID: IIDSAT
+// eslint-disable-next-line no-unused-vars
+import React from "react";
 
+// Test ID: IIDSAT
 import {
   calcMinutesLeft,
   formatCurrency,
