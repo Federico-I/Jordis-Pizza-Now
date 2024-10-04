@@ -1,5 +1,9 @@
+// eslint-disable-next-line no-unused-vars
+import React from "react";
+import { formatCurrency } from "../../utils/helpers";
+
 function MenuItem({ pizza }) {
-  const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza;
+  const [ id, name, unitPrice, ingredients, soldOut, imageUrl ] = pizza;
 
   return (
     <li>

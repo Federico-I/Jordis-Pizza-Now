@@ -2,13 +2,20 @@
 import React from "react";
 import { getMenu } from "../../services/apiRestaurant";
 import { useLoaderData } from "react-router-dom";
+import MenuItem from "./MenuItem";
 
 function Menu() {
 
   ////// Render as you fetch strategy ///////
   const menu = useLoaderData();
 
-  return <h1>Menu</h1>;
+  return (
+    <ul>
+      {menu.map((pizza) => (
+        <MenuItem pizza={pizza} key={pizza.id}/>
+      ))}
+    </ul>
+  );
 }
 
 export async function loader() {
@@ -16,4 +23,4 @@ export async function loader() {
   return menu;
 }
 
-export default Menu ;
+export default Menu;

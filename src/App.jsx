@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import { createBrowserRouter, Router, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./ui/Home";
 import Menu, { loader as menuLoader } from "./features/menu/Menu";
 import Cart from "./features/cart/Cart";
@@ -12,7 +12,7 @@ import AppLayout from "./ui/AppLayout";
 
 //////////////////////////////////////
 //          Router - Data
-/////////////////////////////////////cd
+//////////////////////////////////////
 
 // After createRouter6.4 If you want to use new API's for data loaders, Data Fetchers or Data Actions, it's mandatory to use the CreateBrouserRouter structure (syntax) shown below. 
 
