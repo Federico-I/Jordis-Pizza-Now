@@ -2,6 +2,7 @@
 import React from "react";
 import { formatCurrency } from "../../utils/helpers";
 
+
 function MenuItem({ pizza }) {
   const [ id, name, unitPrice, ingredients, soldOut, imageUrl ] = pizza;
 
