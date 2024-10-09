@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import { useState } from "react";
-import { Form, redirect } from "react-router-dom";
+import { Form, redirect, useNavigate, useNavigation } from "react-router-dom";
 import { createOrder } from "../../services/apiRestaurant";
 
 
@@ -36,6 +36,10 @@ const fakeCart = [
 ];
 
 function CreateOrder() {
+
+  const navigation = useNavigation();
+  const isSubmitting = navigation.state === "submitting";
+
   // const [withPriority, setWithPriority] = useState(false);
   const cart = fakeCart;
 
@@ -76,7 +80,7 @@ function CreateOrder() {
 
         <div>
           <input type="hidden" name="cart" value={JSON.stringify(cart)}/>
-          <button>Order now</button>
+          <button disabled={isSubmitting ? "Placing order..." : "Order now!"} >Order now</button>
         </div>
       </Form>
     </div>
