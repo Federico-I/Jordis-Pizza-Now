@@ -98,6 +98,11 @@ export async function action({ request }) {
     priority: data.priority === "on",
   };
 
+  const errors = {}
+  if(!isValidPhone(order.phone)) errors.phone = "Please enter a valid phone number. We might need it to contact you."
+
+  if (Object.keys(errors).lemght > 0) return errors;
+
   const newOrder = await createOrder(order);
 
   return redirect(`/order/${newOrder.id}`);
