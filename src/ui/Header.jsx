@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <Header>
+    <header className='bg-yellow-500'>
       <Link to="/">Jordis Pizza Now.Co</Link>
 
       <p>Fred</p>
-    </Header>
+    </header>
   );
 }
 

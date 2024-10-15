@@ -3,7 +3,7 @@ import React from "react";
 
 function CartOverview() {
   return (
-    <div>
+    <div className="bg-stone-900">
       <p>
         <span>23 pizzas</span>
         <span>$23.45</span>
