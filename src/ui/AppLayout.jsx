@@ -17,9 +17,12 @@ function AppLayout() {
 
       <Header />
 
-      <main className='mx-auto max-w-3xl overflow-scroll bg-red-500'>
-        <Outlet />
-      </main>
+      <div className='my-10 overflow-scroll'>
+        <main className='mx-auto max-w-3xls'>
+          <Outlet />
+        </main>
+      </div>
+      
 
       <CartOverview/>
     </div>
