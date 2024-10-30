@@ -14,6 +14,9 @@ export default {
       fontSize: {
         huge: ["30rem", { lineHeaight: "1" }],
       },
+      height: {
+        screen: "100dvh",
+      },
     },
   },
   plugins: [],
