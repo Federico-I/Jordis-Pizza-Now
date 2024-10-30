@@ -7,7 +7,14 @@ export default {
       sans: "Roboto Mono, monospace",
     },
 
-    extend: {},
+    extend: {
+      color: {
+        newnew: "#123456"
+      },
+      fontSize: {
+        huge: ["30rem", { lineHeaight: "1" }],
+      },
+    },
   },
   plugins: [],
 }
