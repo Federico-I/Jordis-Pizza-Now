@@ -4,7 +4,7 @@ export default {
   content: ["./src/**/*.{html,js}"],
   theme: {
     fontFamily: {
-      pizza: "Roboto Mono, monospace",
+      sans: "Roboto Mono, monospace",
     },
 
     extend: {},
