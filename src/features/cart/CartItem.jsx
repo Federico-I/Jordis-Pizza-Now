@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-unused-varss
+// eslint-disable-next-line no-unused-varss, no-unused-vars
 import React from "react";
 import { formatCurrency } from "../../utils/helpers";
 
