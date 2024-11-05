@@ -42,7 +42,7 @@ function Cart() {
 
       <div className='mt-6 sace-x-2'>
         <Button to="/order/new" className="primary">Order pizzas</Button>
-        <Button type={secondary}></Button>
+        <Button type="secondary"></Button>
         <button>Clear cart</button>
       </div>
     </div>
