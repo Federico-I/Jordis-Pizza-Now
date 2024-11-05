@@ -1,6 +1,5 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import { Link } from 'react-router-dom';
 import LinkButton from '../../ui/LinkButton';
 import Button from '../../ui/Button';
 import CartItem from './CartItem';
@@ -41,7 +40,7 @@ function Cart() {
         {cart.map((item) => <CartItem item={item} key={item.key}/>)}
       </ul>
 
-      <div className='mt-6'>
+      <div className='mt-6 sace-x-2'>
         <Button to="/order/new" className="primary">Order pizzas</Button>
         <button>Clear cart</button>
       </div>
