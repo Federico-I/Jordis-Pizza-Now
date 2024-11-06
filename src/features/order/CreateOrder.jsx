@@ -48,10 +48,10 @@ function CreateOrder() {
 
   return (
     <div className="px-4 py-6">
-      <h2 className="text-xl font-semibold">Ready to order? Let's go!</h2>
+      <h2 className="text-xl font-semibold mb-8">Ready to order? Let's go!</h2>
 
       <Form method="POST" >
-        <div>
+        <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
           <label>First Name</label>
           <input className="input" type="text" name="customer" required />
         </div>
