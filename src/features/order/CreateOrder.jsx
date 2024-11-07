@@ -50,14 +50,14 @@ function CreateOrder() {
     <div className="px-4 py-6">
       <h2 className="text-xl font-semibold mb-8">Ready to order? Let's go!</h2>
 
-      <Form method="POST" >
+      <Form method="POST">
         <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
           <label className="sm:basis-40">First Name</label>
           <input className="input" type="text" name="customer" required />
         </div>
 
         <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
-          <label>Phone number</label>
+          <label className="sm:basis-40">Phone number</label>
           <div>
             <input className="input" type="tel" name="phone" required />
           </div>
@@ -65,7 +65,7 @@ function CreateOrder() {
         </div>
 
         <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
-          <label>Address</label>
+          <label className="sm:basis-40">Address</label>
           <div>
             <input className="input" type="text" name="address" required />
           </div>
