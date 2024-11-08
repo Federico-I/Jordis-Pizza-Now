@@ -67,11 +67,11 @@ function CreateOrder() {
         <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
           <label className="sm:basis-40">Address</label>
           <div className="grow">
-            <input className="input grow" type="text" name="address" required />
+            <input className="input w-full" type="text" name="address" required />
           </div>
         </div>
 
-        <div>
+        <div className="mb-12flex items-center gap-5">
           <input className="h-6 w-6 accent-yellow-400 focus:outline-none focus:ring focus:ring-yellow-400 focus:ring-offset-2"
             type="checkbox"
             name="priority"
@@ -79,7 +79,7 @@ function CreateOrder() {
             // value={withPriority}
             // onChange={(e) => setWithPriority(e.target.checked)}
           />
-          <label htmlFor="priority">Want to yo give your order priority?</label>
+          <label className="font-medium" htmlFor="priority">Want to yo give your order priority?</label>
         </div>
 
         <div>
