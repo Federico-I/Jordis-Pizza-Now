@@ -30,11 +30,11 @@ function Order() {
 
   return (
     <div className="px-4 py-6 space-y-8">
-      <div className="flex items-center justify-between">
+      <div className="flex flext-wrap items-center justify-between">
         <h2 className="text-xl font-semibold">Order #{id} Status</h2>
 
-        <div>
-          {priority && <span>Priority</span>}
+        <div className="space-x-2">
+          {priority && <span >Priority</span>}
           <span>{status} order</span>
         </div>
       </div>
