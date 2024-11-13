@@ -39,7 +39,7 @@ function Order() {
         </div>
       </div>
 
-      <div>
+      <div className="flex flext-wrap items-center justify-between">
         <p>
           {deliveryIn >= 0
             ? `Only ${calcMinutesLeft(estimatedDelivery)} minutes left 😃`
