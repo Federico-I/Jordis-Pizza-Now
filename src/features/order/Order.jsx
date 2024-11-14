@@ -39,13 +39,13 @@ function Order() {
         </div>
       </div>
 
-      <div className="flex flext-wrap items-center justify-between gap-2 bg-stone-200">
-        <p>
+      <div className="flex flext-wrap items-center justify-between gap-2 bg-stone-200 px-6 py-5">
+        <p className="font-medium">
           {deliveryIn >= 0
             ? `Only ${calcMinutesLeft(estimatedDelivery)} minutes left 😃`
             : "Order should have arrived"}
         </p>
-        <p>(Estimated delivery: {formatDate(estimatedDelivery)})</p>
+        <p className="text-xs text-stone-500">(Estimated delivery: {formatDate(estimatedDelivery)})</p>
       </div>
 
       <div>
