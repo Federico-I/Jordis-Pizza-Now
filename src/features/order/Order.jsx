@@ -30,7 +30,7 @@ function Order() {
 
   return (
     <div className="px-4 py-6 space-y-8">
-      <div className="flex flext-wrap items-center justify-between">
+      <div className="flex flext-wrap items-center justify-between gap-2">
         <h2 className="text-xl font-semibold">Order #{id} Status</h2>
 
         <div className="space-x-2">
@@ -39,7 +39,7 @@ function Order() {
         </div>
       </div>
 
-      <div className="flex flext-wrap items-center justify-between">
+      <div className="flex flext-wrap items-center justify-between gap-2 bg-stone-200">
         <p>
           {deliveryIn >= 0
             ? `Only ${calcMinutesLeft(estimatedDelivery)} minutes left 😃`
