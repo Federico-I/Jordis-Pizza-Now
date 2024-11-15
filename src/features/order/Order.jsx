@@ -49,7 +49,7 @@ function Order() {
       </div>
 
       <div className="space-y-2 bg-stone-200 px-6 py-5">
-        <p>Price pizza: {formatCurrency(orderPrice)}</p>
+        <p className="text-sm font-medium text-stone-600">Price pizza: {formatCurrency(orderPrice)}</p>
         {priority && <p>Price priority: {formatCurrency(priorityPrice)}</p>}
         <p>To pay on delivery: {formatCurrency(orderPrice + priorityPrice)}</p>
       </div>
