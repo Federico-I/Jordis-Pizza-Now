@@ -49,7 +49,7 @@ function Order() {
         <p className="text-xs text-stone-500">(Estimated delivery: {formatDate(estimatedDelivery)})</p>
       </div>
 
-      <ul> 
+      <ul className="dive-stone-200 divide-y"> 
         {cart.map(item => (<OrderItem item={item} key={item.id}/>))}
       </ul>
 
