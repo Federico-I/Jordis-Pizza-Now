@@ -7,6 +7,7 @@ import {
   formatCurrency,
   formatDate,
 } from "../../utils/helpers";
+import OrderItem from "./OrderItem";
 import { getOrder } from "../../services/apiRestaurant";
 import { useLoaderData } from "react-router-dom";
 
@@ -48,8 +49,8 @@ function Order() {
         <p className="text-xs text-stone-500">(Estimated delivery: {formatDate(estimatedDelivery)})</p>
       </div>
 
-      <ul>
-        {cart.map()}
+      <ul> 
+        {cart.map(item => (<OrderItem item={item} key={item.id}/>))}
       </ul>
 
       <div className="space-y-2 bg-stone-200 px-6 py-5">
