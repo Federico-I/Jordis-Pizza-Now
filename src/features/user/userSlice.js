@@ -1,4 +1,5 @@
 // eslint-disable-next-line no-unused-vars
+import { createSlice } from "@reduxjs/toolkit";
 import React from "react";
 
 {
@@ -31,4 +32,7 @@ const initialState = {
   username: "",
 };
 
-const userSlice
+const userSlice = createSlice({
+  name: "user",
+  initialState,
+})
