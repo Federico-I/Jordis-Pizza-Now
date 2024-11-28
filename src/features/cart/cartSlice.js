@@ -1,6 +1,8 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
+// eslint-disable-next-line no-unused-vars
 import { createSlice } from "@reduxjs/toolkit";
+// eslint-disable-next-line no-unused-vars
 import reducer from "../user/userSlice";
 
 const initialState = {
@@ -34,8 +36,12 @@ const cartSlice = {
       // payload = pizzaId
       state.cart = state.cart.filter((item) => item.pizzaId !== action.payload)
     },
-    increaseitemQuantity(state, action) {},
+    increaseitemQuantity(state, action) {
+      const item = state.cart.find((item) => item.pizzaId === action.payload);
+    },
     decreaseItemQuantity(state, action) {},
     clearCart(state, action) {},
   },
 };
+
+export default {initialState, cartSlice};
