@@ -32,6 +32,7 @@ const cartSlice = {
     },
     deleteItem(state, action) {
       // payload = pizzaId
+      state.cart = state.cart.filter((item) => item.pizzaId !== action.payload)
     },
     increaseitemQuantity(state, action) {},
     decreaseItemQuantity(state, action) {},
