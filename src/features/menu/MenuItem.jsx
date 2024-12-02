@@ -2,19 +2,24 @@
 import React from "react";
 import { formatCurrency } from "../../utils/helpers";
 import Button from "../../ui/Button";
+import { useDispatch } from "react-redux";
 
 
 function MenuItem({ pizza }) {
+  const dispatch = useDispatch();
+
   const [ id, name, unitPrice, ingredients, soldOut, imageUrl ] = pizza;
 
   function handleAddToCart() {
     const newItem = {
-      pizzaId: 12,
-      name: "Mediterranean",
-      quantity: 2,
-      unitPrice: 16,
-      totalPrice: 32,
-    },
+      pizzaId: id,
+      name,
+      quantity: 1,
+      unitPrice,
+      totalPrice: unitPrice * 1,
+    };
+
+    dispatch();
   };
 
   return (
