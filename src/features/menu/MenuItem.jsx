@@ -3,6 +3,7 @@ import React from "react";
 import { formatCurrency } from "../../utils/helpers";
 import Button from "../../ui/Button";
 import { useDispatch } from "react-redux";
+import { addItem } from "../cart/cartSlice";
 
 
 function MenuItem({ pizza }) {
@@ -18,9 +19,8 @@ function MenuItem({ pizza }) {
       unitPrice,
       totalPrice: unitPrice * 1,
     };
-
-    dispatch();
-  };
+    dispatch(addItem(newItem));
+  }
 
   return (
     <li className="flex gap-4 py-2">
