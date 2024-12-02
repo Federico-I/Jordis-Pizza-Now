@@ -7,7 +7,15 @@ import Button from "../../ui/Button";
 function MenuItem({ pizza }) {
   const [ id, name, unitPrice, ingredients, soldOut, imageUrl ] = pizza;
 
-  function handleAddToCart() {};
+  function handleAddToCart() {
+    const newItem = {
+      pizzaId: 12,
+      name: "Mediterranean",
+      quantity: 2,
+      unitPrice: 16,
+      totalPrice: 32,
+    },
+  };
 
   return (
     <li className="flex gap-4 py-2">
