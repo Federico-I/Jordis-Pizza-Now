@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
+import { Link } from "react-router-dom";
 
 function CartOverview() {
   return (
@@ -8,7 +9,7 @@ function CartOverview() {
         <span>23 pizzas</span>
         <span>$23.45</span>
       </p>
-      <a href="#">Open cart &rarr;</a>
+      <Link href="/cart">Open cart &rarr;</Link>
     </div>
   );
 }
