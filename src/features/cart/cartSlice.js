@@ -5,7 +5,7 @@ import { createSlice } from "@reduxjs/toolkit";
 // eslint-disable-next-line no-unused-vars
 import reducer from "../user/userSlice";
 
-const initialState = {
+const initialState = {/*
   cart: [
     {
       pizzaId: 12,
@@ -15,7 +15,7 @@ const initialState = {
       totalPrice: 32,
     },
   ],
-};
+*/};
 
 const cartSlice = {
   name: "Cart",
