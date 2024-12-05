@@ -4,6 +4,7 @@ import LinkButton from '../../ui/LinkButton';
 import Button from '../../ui/Button';
 import CartItem from './CartItem';
 import { useSelector } from 'react-redux';
+import { getCart } from './cartSlice';
 
 const fakeCart = [
   {
@@ -33,7 +34,7 @@ function Cart() {
 
   const username = useSelector((state) => state.user.username);
 
-  const cart = fakeCart;
+  const cart = useSelector(getCart);
 
   return (
     <div className='px-4 py-3'>
