@@ -3,6 +3,7 @@ import React from 'react';
 import LinkButton from '../../ui/LinkButton';
 import Button from '../../ui/Button';
 import CartItem from './CartItem';
+import EmptyCart from "./EmptyCart";
 import { useDispatch, useSelector } from 'react-redux';
 import { clearCart, getCart } from './cartSlice';
 
@@ -33,10 +34,10 @@ const fakeCart = [
 function Cart() {
 
   const username = useSelector((state) => state.user.username);
-
   const cart = useSelector(getCart);
-
   const dispatch = useDispatch();
+
+  if(!cart.lenght) return <EmptyCart/>;
 
   return (
     <div className='px-4 py-3'>
