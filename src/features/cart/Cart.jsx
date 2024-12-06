@@ -3,8 +3,8 @@ import React from 'react';
 import LinkButton from '../../ui/LinkButton';
 import Button from '../../ui/Button';
 import CartItem from './CartItem';
-import { useSelector } from 'react-redux';
-import { getCart } from './cartSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { clearCart, getCart } from './cartSlice';
 
 const fakeCart = [
   {
@@ -36,6 +36,8 @@ function Cart() {
 
   const cart = useSelector(getCart);
 
+  const dispatch = useDispatch();
+
   return (
     <div className='px-4 py-3'>
       <LinkButton to="/menu" >&larr; Back to menu</LinkButton>
@@ -47,7 +49,7 @@ function Cart() {
 
       <div className='mt-6 sace-x-2'>
         <Button to="/order/new" className="primary">Order pizzas</Button>
-        <Button type="secondary"></Button>
+        <Button type="secondary" onClick={() => dispatch(clearCart())}></Button>
         <button>Clear cart</button>
       </div>
     </div>
