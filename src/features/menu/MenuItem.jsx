@@ -4,6 +4,7 @@ import { formatCurrency } from "../../utils/helpers";
 import Button from "../../ui/Button";
 import { useDispatch } from "react-redux";
 import { addItem } from "../cart/cartSlice";
+import DeleteItem from "../cart/DeleteItem";
 
 
 function MenuItem({ pizza }) {
@@ -30,6 +31,8 @@ function MenuItem({ pizza }) {
         <p className="text-sm capitalize italic text-stone-500" >{ingredients.join(', ')}</p>
         <div className="mt-auto flex items-center justify-between">
           {!soldOut ? ( <p className="text-sm">{formatCurrency(unitPrice)}</p> ) : ( <p className="text-sm uppercase font-medium text-stone-500" >Sold out</p> )}
+
+          <DeleteItem pizzaId={id} />
 
           {!soldOut && <Button type="small" onClick={handleAddToCart}> Add to Cart</Button>}
         </div>
