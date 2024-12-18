@@ -39,7 +39,7 @@ function MenuItem({ pizza }) {
 
           {isInCart && 
             <div>
-              <UpdateItemQuantity />
+              <UpdateItemQuantity pizzaId={id} currentQuantity={currentQuantity}/>
               <DeleteItem pizzaId={id} />
             </div>
           }
