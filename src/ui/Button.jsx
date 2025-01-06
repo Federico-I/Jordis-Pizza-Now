@@ -2,6 +2,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+/*
+
 // eslint-disable-next-line react/prop-types,
 function Button({ children, disabled, to, type, onClick}) {
 
@@ -36,3 +38,6 @@ function Button({ children, disabled, to, type, onClick}) {
 }
 
 export default Button;
+
+*/
+

@@ -16,6 +16,8 @@ import AppLayout from "./ui/AppLayout";
 
 // After createRouter6.4 If you want to use new API's for data loaders, Data Fetchers or Data Actions, it's mandatory to use the CreateBrouserRouter structure (syntax) shown below. 
 
+
+/* 
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
@@ -37,3 +39,5 @@ function App() {
 }
 
 export default App;
+
+*/

@@ -9,6 +9,10 @@ import { getCart } from "../cart/cartSlice";
 import EmptyCart from "../cart/EmptyCart";
 
 
+
+
+/*
+
 // https://uibakery.io/regex-library/phone-number
 const isValidPhone = (str) =>
   /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/.test(
@@ -124,3 +128,5 @@ export async function action({ request }) {
 }
 
 export default CreateOrder;
+
+*/
