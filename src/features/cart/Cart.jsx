@@ -7,6 +7,7 @@ import EmptyCart from "./EmptyCart";
 import { useDispatch, useSelector } from 'react-redux';
 import { clearCart, getCart } from './cartSlice';
 
+
 const fakeCart = [
   {
     pizzaId: 12,
@@ -31,6 +32,26 @@ const fakeCart = [
   },
 ];
 
+function Cart() {
+  const cart = fakeCart;
+
+  return (
+    <div>
+      <Link to="/menu">&larr; Back to menu</Link>
+
+      <h2>Your cart, %NAME%</h2>
+
+      <div>
+        <Link to="/order/new">Order pizzas</Link>
+        <button>Clear cart</button>
+      </div>
+    </div>
+  );
+}
+
+export default Cart;
+
+/*
 function Cart() {
 
   const username = useSelector((state) => state.user.username);
@@ -58,3 +79,4 @@ function Cart() {
 }
 
 export default Cart;
+*/

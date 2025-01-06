@@ -9,6 +9,25 @@ import { useSelector } from "react-redux";
 function CartItem({ item }) {
   const { pizzaId, name, quantity, totalPrice } = item;
 
+  return (
+    <li>
+      <p>
+        {quantity}&times; {name}
+      </p>
+      <div>
+        <p>{formatCurrency(totalPrice)}</p>
+      </div>
+    </li>
+  );
+}
+
+export default CartItem;
+
+
+/*
+function CartItem({ item }) {
+  const { pizzaId, name, quantity, totalPrice } = item;
+
   const currentQuantity = useSelector(getCurrentQuantityById(pizzaId));
 
   return (
@@ -26,3 +45,5 @@ function CartItem({ item }) {
 }
 
 export default CartItem;
+*/
+
