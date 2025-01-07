@@ -11,14 +11,10 @@ import AppLayout from "./ui/AppLayout";
 
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/menu",
-    element: <Menu />
-  }
+  { path: "/", element: <Home /> },
+  { path: "/menu", element: <Menu /> },
+  { path: "/order/new", element: <CreateOrder /> }
+  { path: "/order/:order", element: <Order /> }
 ]);
 
 function App() {
