@@ -10,6 +10,23 @@ import Order, { loader as orderLoader } from "./features/order/Order";
 import AppLayout from "./ui/AppLayout";
 
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/menu",
+    element: <Menu />
+  }
+]);
+
+function App() {
+  return <RouterProvider router={router}/>;
+}
+
+export default App;
+
 //////////////////////////////////////
 //          Router - Data
 //////////////////////////////////////
