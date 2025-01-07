@@ -5,6 +5,21 @@ import CartOverview from '../features/cart/CartOverview';
 import { Outlet, useNavigation } from 'react-router-dom';
 import Loader from './Loader';
 
+function AppLayout() {
+  return(
+    <div>
+      <Header />
+
+      <main>
+        <h1>Content</h1>
+      </main>
+
+      <CartOverview />
+    </div>
+  );
+}
+
+/*
 // will implement loaders and menu fetched from apiRestaurant
 
 function AppLayout() {
@@ -13,7 +28,6 @@ function AppLayout() {
 
   return (
     <div className='grid h-screen grid-row-[auto_1fr_auto]'>
-     {/* {isLoading && <Loader />}  */}
      { true && <Loader />}
 
       <Header />
@@ -31,3 +45,5 @@ function AppLayout() {
 }
 
 export default AppLayout;
+*/
+
