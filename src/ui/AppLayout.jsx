@@ -5,13 +5,15 @@ import CartOverview from '../features/cart/CartOverview';
 import { Outlet, useNavigation } from 'react-router-dom';
 import Loader from './Loader';
 
+// Outlet comp on React will render whatever is the current nested route, in this case anything in AppLayout
+
 function AppLayout() {
   return(
     <div>
       <Header />
 
       <main>
-        <h1>Content</h1>
+        <Outlet /> 
       </main>
 
       <CartOverview />
