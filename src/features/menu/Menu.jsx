@@ -4,9 +4,20 @@ import { getMenu } from "../../services/apiRestaurant";
 import { useLoaderData } from "react-router-dom";
 import MenuItem from "./MenuItem";
 
+//Custom hook useLoaderData to load hooks from app
+
+//ReactRouter will start fetching data as it starts rendering the correct route
+
 function Menu() {
-    ////// Render as you fetch "strategy" ///////
-  return <h1>Menu</h1>;
+  const menu = useLoaderData();
+
+  return (
+    <ul>
+      {menu.map((pizza) => (
+        <MenuItem pizza={pizza} key={pizza.id} />
+      ))}
+    </ul>
+  );
 }
 
 export async function loader() {
