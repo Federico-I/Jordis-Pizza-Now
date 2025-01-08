@@ -21,6 +21,8 @@ function AppLayout() {
   );
 }
 
+export default AppLayout;
+
 /*
 // will implement loaders and menu fetched from apiRestaurant
 

@@ -5,8 +5,21 @@ import { useLoaderData } from "react-router-dom";
 import MenuItem from "./MenuItem";
 
 function Menu() {
+    ////// Render as you fetch "strategy" ///////
+  return <h1>Menu</h1>;
+}
 
-  ////// Render as you fetch strategy ///////
+export async function loader() {
+  const menu = await getMenu();
+  return menu;
+}
+
+export default Menu;
+
+/*
+function Menu() {
+
+
   const menu = useLoaderData();
 
   return (
@@ -24,3 +37,4 @@ export async function loader() {
 }
 
 export default Menu;
+*/
