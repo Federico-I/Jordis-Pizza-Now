@@ -12,7 +12,9 @@ function AppLayout() {
   const isLoading = navigation.state === "loading";
 
   return(
-    <div>
+    <div className='layout'>
+      {isLoading && <Loader />}
+
       <Header />
 
       <main>
