@@ -8,6 +8,9 @@ import Loader from './Loader';
 // Outlet comp on React will render whatever is the current nested route, in this case anything in AppLayout
 
 function AppLayout() {
+  const navigation = useNavigation();
+  const isLoading = navigation.state === "loading";
+
   return(
     <div>
       <Header />
