@@ -10,7 +10,10 @@ import Order, { loader as orderLoader } from "./features/order/Order";
 import AppLayout from "./ui/AppLayout";
 
 const router = createBrowserRouter([
-  { element: <AppLayout />, 
+  { 
+    element: <AppLayout />,
+    errorElement: <Error />,
+
     children: [
       { path: "/", element: <Home /> },
       { path: "/menu", element: <Menu />, loader: menuLoader },
