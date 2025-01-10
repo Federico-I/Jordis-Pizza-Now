@@ -1,6 +1,22 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
+
+function SearchOrder() {
+  const [query, setQuery] = useState();
+
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input placeholder='Search order #' value={query} onChange={(e) => setQuery(e.target.value)}/>
+    </form>
+  )
+}
+
+export default SearchOrder;
 
 /*
 function SearchOrder() {
