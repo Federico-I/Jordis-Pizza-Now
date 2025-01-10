@@ -1,11 +1,14 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SearchOrder from '../features/order/SearchOrder';
 
 function Header() {
   return (
     <header >
       <Link to="/" >Jordis Pizza Now.Co</Link>
+
+      <SearchOrder></SearchOrder>
 
       <p >Fred</p>
     </header >
