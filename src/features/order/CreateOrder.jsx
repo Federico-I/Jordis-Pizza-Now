@@ -91,6 +91,12 @@ function CreateOrder() {
 export async function action ({ request }) {
   const formData = await request.formData();
   const data = Object.fromEntries(formData); // will get data out of the form and style data as an object in the console
+
+  const order = {
+    cart: JSON.parse(data.cart),
+    priority: data.priority === "on",
+  };
+
   return null;
 }
 
