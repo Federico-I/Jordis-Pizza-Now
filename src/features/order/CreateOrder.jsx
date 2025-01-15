@@ -41,6 +41,9 @@ const fakeCart = [
 ];
 
 function CreateOrder() {
+
+  const navigation = useNavigation();
+  const isSubmitting = navigation.state === "submitting";
   // const [withPriority, setWithPriority] = useState(false);
   const cart = fakeCart;
 
@@ -81,7 +84,7 @@ function CreateOrder() {
 
         <div>
           <input type="hidden" name="cart" value={JSON.stringify(cart)} />
-          <button>Order now</button>
+          <button disabled={isSubmitting}>{isSubmitting ? "Placing order..." : "Order now"}</button>
         </div>
       </Form>
     </div>
