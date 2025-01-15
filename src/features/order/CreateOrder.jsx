@@ -102,6 +102,12 @@ export async function action ({ request }) {
 
   const newOrder = await createOrder(order);
 
+  const errors = {};
+  if (!isValidPhone(order.phone))
+    errors.phone = "Please give use your correct phone number. We might need it to contact you.";
+  
+  if (Object.keys(errors).length > 0) return errors; // if there is one or more errors will return "errors" message
+
   return redirect(`/order/${newOrder.id}`);
 }
 
