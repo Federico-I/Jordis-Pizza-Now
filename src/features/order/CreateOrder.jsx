@@ -97,7 +97,9 @@ export async function action ({ request }) {
     priority: data.priority === "on",
   };
 
-  return null;
+  const newOrder = await createOrder(order);
+
+  return redirect(`/order/${newOrder.id}`);
 }
 
 export default CreateOrder;
