@@ -5,16 +5,12 @@ import { Link } from "react-router-dom";
 import { getTotalCartPrice, getTotalCartQuantity } from "./cartSlice";
 
 function CartOverview() {
-  const totalCartQuantity = useSelector(getTotalCartQuantity);
-  const totalCartPrice = useSelector(getTotalCartPrice);
-
-  if(!totalCartQuantity) return null;
 
   return (
-    <div className="bg-stone-950">
-      <p>
-        <span>{totalCartQuantity} pizzas</span>
-        <span>{totalCartPrice}</span>
+    <div className="bg-stone-800 text-stone-200">
+      <p className="font-semibold text-song-300">
+        <span> pizzas</span>
+        <span>pp</span>
       </p>
       <Link href="/cart">Open cart &rarr;</Link>
     </div>
@@ -22,3 +18,13 @@ function CartOverview() {
 }
 
 export default CartOverview;
+
+
+/*
+
+  const totalCartQuantity = useSelector(getTotalCartQuantity);
+  const totalCartPrice = useSelector(getTotalCartPrice);
+
+  if(!totalCartQuantity) return null;
+
+*/
