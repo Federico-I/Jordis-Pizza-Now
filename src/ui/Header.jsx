@@ -5,7 +5,7 @@ import SearchOrder from '../features/order/SearchOrder';
 
 function Header() {
   return (
-    <header className='bg-yellow-500 uppercase'>
+    <header className='bg-yellow-500 px-4 py-3 uppercase border-b border-stone-500'>
       <Link to="/" className='tracking-widest'>Jordis Pizza Now.Co</Link>
 
       <SearchOrder></SearchOrder>
