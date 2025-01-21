@@ -12,7 +12,7 @@ function AppLayout() {
   const isLoading = navigation.state === "loading";
 
   return(
-    <div className='layout'>
+    <div className='h-128 grid bg-red'>
       {isLoading && <Loader />}
 
       <Header />
