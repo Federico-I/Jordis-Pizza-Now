@@ -17,7 +17,7 @@ function AppLayout() {
 
       <Header />
 
-      <main className="overflow-scroll">
+      <main className="mx-auto max-w-3xl overflow-scroll bg-red-500">
         <Outlet /> 
       </main>
 
