@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Button({ children, disabled }) {
 
   return(
-    <button disabled={disabled} className="bg-yellow-400 uppercase font-semibold text-ston-800 py-3 px-4 inline-block tracking-wide rounded-full hover:bg-yellow-300 transition-colors duration-300 focus:outline-none focus:ring focus:ring-yellow-300 focuse:ring-offset-2 disabled:cursor-not-allowed">
+    <button disabled={disabled} className="bg-yellow-400 uppercase font-semibold text-ston-800 py-3 px-4 inline-block tracking-wide rounded-full hover:bg-yellow-300 transition-colors duration-300 focus:outline-none focus:ring focus:ring-yellow-300 focuse:ring-offset-2 disabled:cursor-not-allowed md:px-6 sm:py-4">
       {children}
     </button>
   );
