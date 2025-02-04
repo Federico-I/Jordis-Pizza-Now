@@ -41,6 +41,12 @@ function Cart() {
 
       <h2 className='mt-7 text-xl font-semibold'>Your cart, %NAME%</h2>
 
+      <ul>
+        {cart.map((item) => {
+          <Cart item={item} key={item.key}/>
+        })}
+      </ul>
+
       <div>
         <Link to="/order/new" type="primary">Order pizzas</Link>
         <button>Clear cart</button>
