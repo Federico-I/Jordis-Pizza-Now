@@ -5,6 +5,7 @@ import DeleteItem from "./DeleteItem";
 import UpdateItemQuantity from "./UpdateItemQuantity";
 import { getCurrentQuantityById } from "./cartSlice";
 import { useSelector } from "react-redux";
+import Button from "../../ui/Button";
 
 function CartItem({ item }) {
   const { pizzaId, name, quantity, totalPrice } = item;
@@ -16,6 +17,7 @@ function CartItem({ item }) {
       </p>
       <div>
         <p>{formatCurrency(totalPrice)}</p>
+        <Button type="small">Delete</Button>
       </div>
     </li>
   );
