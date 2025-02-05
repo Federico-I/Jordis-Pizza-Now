@@ -15,7 +15,7 @@ function CartItem({ item }) {
       <p>
         {quantity}&times; {name}
       </p>
-      <div>
+      <div className="flex items-center justify-between">
         <p>{formatCurrency(totalPrice)}</p>
         <Button type="small">Delete</Button>
       </div>
