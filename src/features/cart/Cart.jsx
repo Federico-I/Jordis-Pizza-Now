@@ -49,7 +49,7 @@ function Cart() {
 
       <div className='mt-6 space-x-2'>
         <Link to="/order/new" type="primary">Order pizzas</Link>
-        <button>Clear cart</button>
+        <Button type="secondary">Clear Cart</Button>
       </div>
     </div>
   );
