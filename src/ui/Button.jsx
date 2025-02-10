@@ -3,13 +3,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Button({ children, disabled, to, type }) {
-  const className = "bg-yellow-400 uppercase font-semibold text-ston-800 py-3 px-4 inline-block tracking-wide rounded-full hover:bg-yellow-300 transition-colors duration-300 focus:outline-none focus:ring focus:ring-yellow-300 focuse:ring-offset-2 disabled:cursor-not-allowed md:px-6 sm:py-4";
 
   const base = "bg-yellow-400 uppercase font-semibold text-ston-800 inline-block tracking-wide rounded-full hover:bg-yellow-300 transition-colors duration-300 focus:outline-none focus:ring focus:ring-yellow-300 focuse:ring-offset-2 disabled:cursor-not-allowed";
 
   const styles = {
     primary: base + " py-3 px-4 md:px-6 sm:py-4",
-    small: base + " px-4 py-2 md:px-5 md:py-2.5 text-xs"
+    small: base + " px-4 py-2 md:px-5 md:py-2.5 text-xs",
+    secondary: "uppercase font-semibold text-ston-800 inline-block tracking-wide rounded-full border-2 hover:bg-yellow-300 transition-colors duration-300 focus:outline-none focus:ring focus:ring-yellow-300 focuse:ring-offset-2 disabled:cursor-not-allowed py-3 px-4 md:px-6 sm:py-4",
   };
 
   if(to) return <Link to={to} className={styles[type]}>{children}</Link>
@@ -23,4 +23,8 @@ function Button({ children, disabled, to, type }) {
 
 export default Button;
 
+/*
 
+const className = "bg-yellow-400 uppercase font-semibold text-ston-800 py-3 px-4 inline-block tracking-wide rounded-full hover:bg-yellow-300 transition-colors duration-300 focus:outline-none focus:ring focus:ring-yellow-300 focuse:ring-offset-2 disabled:cursor-not-allowed md:px-6 sm:py-4";
+
+*/
