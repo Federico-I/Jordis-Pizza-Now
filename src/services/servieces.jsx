@@ -1,9 +1,9 @@
 import React from 'react';
 
-function servieces() {
+function services() {
   return (
-    <div>servieces</div>
+    <div>services</div>
   )
 }
 
-export default servieces
+export default services;
