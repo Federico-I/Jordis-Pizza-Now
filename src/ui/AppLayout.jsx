@@ -31,30 +31,29 @@ function AppLayout() {
 export default AppLayout;
 
 /*
-// will implement loaders and menu fetched from apiRestaurant
 
 function AppLayout() {
   const navigation = useNavigation();
   const isLoading = navigation.state === "loading";
 
-  return (
-    <div className='grid h-screen grid-row-[auto_1fr_auto]'>
-     { true && <Loader />}
+  return(
+    <div className="grid h-screen grid-rows-[auto_1fr_auto]">
+      {isLoading && <Loader />}
 
       <Header />
 
-      <div className='my-10 overflow-scroll'>
-        <main className='mx-auto max-w-3xls'>
-          <Outlet />
+      <div className='overflow-scroll'>
+        <main className="mx-auto max-w-3xl">
+          <Outlet /> 
         </main>
       </div>
-      
 
-      <CartOverview/>
+      <CartOverview />
     </div>
-  )
+  );
 }
 
 export default AppLayout;
+
 */
 

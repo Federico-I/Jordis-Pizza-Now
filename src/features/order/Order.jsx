@@ -27,7 +27,12 @@ function Order() {
     cart,
   } = order;
 
-  const deliveryIn = calcMinutesLeft(estimatedDelivery);
+  
+
+
+
+/* 
+const deliveryIn = calcMinutesLeft(estimatedDelivery);
 
   return (
     <div className="px-4 py-6 space-y-8">
@@ -64,3 +69,5 @@ export async function loader({ params }) {
 }
 
 export default Order;
+
+*/
