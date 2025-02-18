@@ -28,15 +28,14 @@ export async function loader() {
 export default Menu;
 
 /*
+
 function Menu() {
-
-
   const menu = useLoaderData();
 
   return (
-    <ul className="divide-y divide-stone-200 px-2">
+    <ul className="space-y-2 divide-y divide-stone-200 px-2">
       {menu.map((pizza) => (
-        <MenuItem pizza={pizza} key={pizza.id}/>
+        <MenuItem pizza={pizza} key={pizza.id} />
       ))}
     </ul>
   );
@@ -48,4 +47,5 @@ export async function loader() {
 }
 
 export default Menu;
+
 */
