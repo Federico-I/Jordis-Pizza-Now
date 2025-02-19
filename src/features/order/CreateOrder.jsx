@@ -40,6 +40,12 @@ const fakeCart = [
   },
 ];
 
+
+
+
+
+/*
+
 function CreateOrder() {
 
   const navigation = useNavigation();
@@ -118,3 +124,6 @@ export async function action ({ request }) {
 }
 
 export default CreateOrder;
+
+
+*/
