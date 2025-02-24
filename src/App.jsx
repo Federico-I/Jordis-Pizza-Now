@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-unused-vars
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Menu from "./features/menu/Menu";
@@ -25,7 +25,7 @@ const router = createBrowserRouter ([
     element: <CreateOrder />
   },
   {
-    path: "/order/:OrderIDn",
+    path: "/order/:OrderID",
     element: <Order />
   },
 

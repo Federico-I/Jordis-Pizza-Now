@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import { useState } from "react";
 
@@ -37,7 +39,7 @@ function CreateOrder() {
 
   return (
     <div>
-      <h2>Ready to order? Let's go!</h2>
+      <h2>Hungry? Order now!</h2>
 
       <form>
         <div>
@@ -67,7 +69,7 @@ function CreateOrder() {
             // value={withPriority}
             // onChange={(e) => setWithPriority(e.target.checked)}
           />
-          <label htmlFor="priority">Want to yo give your order priority?</label>
+          <label htmlFor="priority">Want to make an order with priority?</label>
         </div>
 
         <div>
