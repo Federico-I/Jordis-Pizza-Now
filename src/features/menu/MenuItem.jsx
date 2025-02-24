@@ -1,3 +1,5 @@
+import React from "react";
+
 function MenuItem({ pizza }) {
   const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza;
 
