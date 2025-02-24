@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { useState } from "react";
 
@@ -37,7 +38,7 @@ function CreateOrder() {
 
   return (
     <div>
-      <h2>Ready to order? Let's go!</h2>
+      <h2>Ready to order? Lets go!</h2>
 
       <form>
         <div>
