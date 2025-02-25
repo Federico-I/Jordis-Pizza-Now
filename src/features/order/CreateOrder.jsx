@@ -53,7 +53,7 @@ function CreateOrder() {
             <input type="tel" name="phone" required />
           </div>
         </div>
-
+        
         <div>
           <label>Address</label>
           <div>
@@ -69,7 +69,7 @@ function CreateOrder() {
             // value={withPriority}
             // onChange={(e) => setWithPriority(e.target.checked)}
           />
-          <label htmlFor="priority">Want to make an order with priority?</label>
+          <label htmlFor="priority">Order with priority?</label>
         </div>
 
         <div>
