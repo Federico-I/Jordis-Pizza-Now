@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg';
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './ui/Home';
 import Menu from './features/menu/Menu';
 import CreateOrder from './features/order/CreateOrder';
@@ -27,9 +27,7 @@ const router = createBrowserRouter([
 ])
 
 function App() {
-  const x = 23;
-
-  return <div>React Project {x}</div>
-}
+  return <RouterProvider router={router} />;
+};
 
 export default App;
