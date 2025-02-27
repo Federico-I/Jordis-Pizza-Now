@@ -2,13 +2,15 @@
 import React from 'react';
 import Header from './Header';
 import CartOverview from '../features/cart/CartOverview';
+import { Outlet } from 'react-router-dom';
 
 function Layout() {
   return (
     <div>
       <Header />
+      
       <main>
-        <h1>Info</h1>
+        <Outlet />
       </main>
 
       <CartOverview />
@@ -16,4 +18,4 @@ function Layout() {
   )
 }
 
-export default Layout
+export default Layout;
