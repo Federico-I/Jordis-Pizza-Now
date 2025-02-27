@@ -1,3 +1,8 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+// eslint-disable-next-line no-unused-vars
+import React from "react";
+
 function getPosition() {
   return new Promise(function (resolve, reject) {
     navigator.geolocation.getCurrentPosition(resolve, reject);
