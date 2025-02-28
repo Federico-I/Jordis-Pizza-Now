@@ -4,7 +4,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './ui/Home';
-import Menu from './features/menu/Menu';
+import Menu, { loader as menuInfoLoader } from './features/menu/Menu';
 import CreateOrder from './features/order/CreateOrder';
 import Order from './features/order/Order';
 import Cart from './features/cart/Cart';
@@ -20,7 +20,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/menu",
-        element: <Menu />
+        element: <Menu />,
+        loader: menuInfoLoader,
       },
       {
         path: "/cart",
