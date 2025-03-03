@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+import React from 'react';
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg';
@@ -9,10 +10,12 @@ import CreateOrder from './features/order/CreateOrder';
 import Order from './features/order/Order';
 import Cart from './features/cart/Cart';
 import Layout from './ui/Layout';
+import Error from './ui/Error';
 
 const router = createBrowserRouter([
   {
     element: <Layout />,
+    errorElement: <Error />,
     children: [
       {
         path: "/",

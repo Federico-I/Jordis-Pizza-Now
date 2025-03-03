@@ -3,6 +3,7 @@ import React from 'react';
 import Header from './Header';
 import CartOverview from '../features/cart/CartOverview';
 import { Outlet, useNavigate } from 'react-router-dom';
+import Loader from './Loader';
 
 function Layout() {
   const navigation = useNavigate();
@@ -10,6 +11,8 @@ function Layout() {
 
   return (
     <div className='layout'>
+      {isLoading && <Loader />}
+
       <Header />
       
       <main>
