@@ -1,7 +1,8 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import { useState } from "react";
-import { useNavigation } from "react-router-dom";
+import { redirect, useNavigation } from "react-router-dom";
+import { createOrder } from "../../services/apiRestaurant";
 
 // https://uibakery.io/regex-library/phone-number
 const isValidPhone = (str) =>
@@ -81,6 +82,25 @@ function CreateOrder() {
       </form>
     </div>
   );
+}
+
+export async function action({ request }) {
+  const formData = await request.formData();
+  const data = Object.fromEntries(formData);
+
+  const order = {
+    ...data,
+    cart: JSON.parse(data.cart),
+    priority: data.priority === "",
+  };
+
+  const newOrder = await createOrder(order);
+  
+  const errors = {};
+  if (!isValidPhone(order.phone))
+    errors.phone = "Please enter valid phone number";
+
+  return redirect(`/order/${newOrder.id}`)
 }
 
 export default CreateOrder;
