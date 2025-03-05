@@ -1,5 +1,7 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import { useState } from "react";
+import { useNavigation } from "react-router-dom";
 
 // https://uibakery.io/regex-library/phone-number
 const isValidPhone = (str) =>
@@ -32,6 +34,9 @@ const fakeCart = [
 ];
 
 function CreateOrder() {
+  const navigation = useNavigation();
+  const isSubmitting = navigation.state === "submitting";
+
   // const [withPriority, setWithPriority] = useState(false);
   const cart = fakeCart;
 
@@ -71,7 +76,7 @@ function CreateOrder() {
         </div>
 
         <div>
-          <button>Order now</button>
+          <button disabled={isSubmitting}>{ isSubmitting ? "Processing Order" : "Order Now"}</button>
         </div>
       </form>
     </div>
