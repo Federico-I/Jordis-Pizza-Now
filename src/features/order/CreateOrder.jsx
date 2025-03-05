@@ -93,12 +93,14 @@ export async function action({ request }) {
     cart: JSON.parse(data.cart),
     priority: data.priority === "",
   };
-
-  const newOrder = await createOrder(order);
   
   const errors = {};
   if (!isValidPhone(order.phone))
     errors.phone = "Please enter valid phone number";
+
+  if(Object.keys(errors).length > 0) return errors;
+
+  const newOrder = await createOrder(order);
 
   return redirect(`/order/${newOrder.id}`)
 }
