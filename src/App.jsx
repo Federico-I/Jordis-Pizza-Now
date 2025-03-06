@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { useState } from 'react'
+import tailwindcssPlugin from 'prettier-plugin-tailwindcss';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';

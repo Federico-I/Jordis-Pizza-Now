@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
+// eslint-disable-next-line no-unused-vars
 import { useState } from "react";
 import { redirect, useActionData, useNavigation } from "react-router-dom";
 import { createOrder } from "../../services/apiRestaurant";
@@ -10,6 +11,7 @@ const isValidPhone = (str) =>
     str
   );
 
+  /*
 const fakeCart = [
   {
     pizzaId: 12,
@@ -33,6 +35,7 @@ const fakeCart = [
     totalPrice: 15,
   },
 ];
+*/
 
 function CreateOrder() {
   const navigation = useNavigation();
@@ -41,7 +44,7 @@ function CreateOrder() {
   const formErrors = useActionData();
 
   // const [withPriority, setWithPriority] = useState(false);
-  const cart = fakeCart;
+  // const cart = fakeCart;
 
   return (
     <div>
