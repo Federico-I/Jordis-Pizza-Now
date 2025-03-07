@@ -4,10 +4,12 @@ import React from "react";
 function Home() {
   return (
     <div>
-      <h1 className="text-xl text-blue-500 font-semibold text-center">
+      <h1 className="text-xl text-blue-700 font-semibold text-center">
         The best pizza
         <br />
-        Straight out of the oven, straight to you
+        <span className="text-red-400">
+          Straight out of the oven, straight to you
+        </span>
       </h1>
     </div>
   );
