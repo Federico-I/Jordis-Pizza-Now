@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <header className='bg-red-500'>
-      <Link to="/">Jordi's Pizza Co.</Link>
+    <header className='bg-red-500 uppercase'>
+      <Link to="/" className='tracking-widest'>Jordi's Pizza Co.</Link>
 
       <p>Fede</p>
     </header>
