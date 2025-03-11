@@ -4,8 +4,8 @@ import CreateUser from "../features/user/CreateUser";
 
 function Home() {
   return (
-    <div className="mt-10">
-      <h1 className="text-xl mb-4 font-semibold text-center">
+    <div className="my-10 text-center">
+      <h1 className="text-xl mb-8 font-semibold text-center">
         The best pizza
         <br />
         <span className="text-red-400">
