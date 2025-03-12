@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <header className='bg-red-500 uppercase border-b border-stone-500 bg-yellow-500 px-4 py-3 uppercase'>
+    <header className='bg-red-500 uppercase border-b border-stone-500 bg-yellow-500 px-4 py-3 uppercase sm:px-6'>
       <Link to="/" className='tracking-widest'>Jordi's Pizza Co.</Link>
 
       <p>Fede</p>
