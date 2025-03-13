@@ -10,14 +10,16 @@ function Layout() {
   const isLoading = navigation.state === "loading";
 
   return (
-    <div className='layout'>
+    <div className='grid h-screen grid-row-[auto_1fr_auto] '>
       {isLoading && <Loader />}
 
       <Header />
       
-      <main>
-        <Outlet />
-      </main>
+      <div className='overflow-scroll'>
+        <main className='max-auto max-w-3xl w-20 bg-red-500'>
+          <Outlet />
+        </main>
+      </div>
 
       <CartOverview />
     </div>
