@@ -84,7 +84,7 @@ function CreateOrder() {
 
         <div>
           <input type="hidden" name="cart" value={JSON.stringify(cart)} />
-          <button disabled={isSubmitting} className="bg-yellow-400 px-4 py-3 font-semibold uppercase text-stone-800 tracking-wide">{ isSubmitting ? "Processing Order" : "Order Now"}</button>
+          <button disabled={isSubmitting} className="bg-yellow-400 px-4 py-3 font-semibold uppercase text-stone-800 tracking-wide hover:bg-yellow-300 transition-colors duration-400 focus:outline-none focus:ring focus:ring-yellow-300 focus:ring focus:ring-yellow-300 focus:ring-offset-2 disabled:cursor-not-allowed">{ isSubmitting ? "Processing Order" : "Order Now"}</button>
         </div>
       </form>
     </div>
@@ -105,11 +105,11 @@ export async function action({ request }) {
   if (!isValidPhone(order.phone))
     errors.phone = "Please enter valid phone number";
 
-  if(Object.keys(errors).length > 0) return errors;
+  // if(Object.keys(errors).length > 0) return errors;
 
-  const newOrder = await createOrder(order);
+  // const newOrder = await createOrder(order);
 
-  return redirect(`/order/${newOrder.id}`)
+  // return redirect(`/order/${newOrder.id}`)
 }
 
 export default CreateOrder;
