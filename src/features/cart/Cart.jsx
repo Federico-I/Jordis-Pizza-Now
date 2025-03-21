@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import LinkButton from '../../ui/LinkButton';
+import Button from '../../ui/Button';
 
 const fakeCart = [
   {
@@ -36,7 +37,8 @@ function Cart() {
       <h2>Your cart, %NAME%</h2>
 
       <div>
-        <LinkButton to="/order/new">Order pizzas</LinkButton>
+        <Button to="/order/new">Order pizzas</Button>
+        
         <button>Clear cart</button>
       </div>
     </div>
