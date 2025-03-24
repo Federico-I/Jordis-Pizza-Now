@@ -3,7 +3,9 @@ import React from 'react';
 
 function Loader() {
   return (
-    <div className='loader'>Loader</div>
+    <div className='absolute bg-slate-300/30 inset-0 backdrop-blur-sm flex items-center justify-center'>
+      <div className='loader'>Loader</div>
+    </div>
   )
 }
 
