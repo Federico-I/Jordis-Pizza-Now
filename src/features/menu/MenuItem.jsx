@@ -10,10 +10,10 @@ function MenuItem({ pizza }) {
   return (
     <li className="flex gap-4 py-2">
       <img src={imageUrl} alt={name} className={`h-24 ${soldOut ? "opacity-70 grayscale" : ""}`}/>
-      <div className="flex flex-col">
+      <div className="flex grow flex-col">
         <p className="font-medium">{name}</p>
         <p className="text-sm italic text-stone-500 capitalize">{ingredients.join(', ')}</p>
-        <div className="mt-auto flex flex-grow items-center justify-between">
+        <div className="mt-auto flex items-center justify-between">
           {!soldOut ? <p className="text-sm">{formatCurrency(unitPrice)}</p> : <p className="text-sm uppercase font-medium text-stone-600">Sold out</p>}
           <Button>Add to Cart</Button>
         </div>
