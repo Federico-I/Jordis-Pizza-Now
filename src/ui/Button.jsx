@@ -11,6 +11,7 @@ function Button({ children, disabled, to, type}) {
 
   const styles = { 
     primary: baseStyle + "px-4 py-3 sm:px-6 sm:py-4",
+    samll: baseStyle + "px-4 py-2 md:px-5 md:py-2.5 text-xs",
   };
   
   if(to) return <Link to={to} className={className}>{children}</Link>
