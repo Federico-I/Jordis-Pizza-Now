@@ -43,7 +43,7 @@ function Cart() {
         ))}
       </ul>
 
-      <div className='mt-6'>
+      <div className='mt-6 space-x-2'>
         <Button to="/order/new" type="primary">Order pizzas</Button>
         
         <button>Clear cart</button>
