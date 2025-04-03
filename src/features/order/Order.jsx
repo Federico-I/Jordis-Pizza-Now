@@ -33,7 +33,7 @@ function Order() {
         </div>
       </div>
 
-      <div>
+      <div className="flex flex-wrap items-center justify gap-2 bg-stone-200 px-6 py-5">
         <p>
           {deliveryIn >= 0
             ? `Only ${calcMinutesLeft(estimatedDelivery)} minutes left 😃`
