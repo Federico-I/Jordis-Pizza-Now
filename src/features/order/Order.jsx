@@ -42,10 +42,10 @@ function Order() {
         <p className="text-xs text-stone-500">(Estimated delivery: {formatDate(estimatedDelivery)})</p>
       </div>
 
-      <div>
-        <p>Price pizza: {formatCurrency(orderPrice)}</p>
+      <div className="space-y-2 bg-stone-200 px-6 py-5">
+        <p className="text-sm font-medium text-stoe-700">Price pizza: {formatCurrency(orderPrice)}</p>
         {priority && <p>Price priority: {formatCurrency(priorityPrice)}</p>}
-        <p>To pay on delivery: {formatCurrency(orderPrice + priorityPrice)}</p>
+        <p className="font-bold">To pay on delivery: {formatCurrency(orderPrice + priorityPrice)}</p>
       </div>
     </div>
   );
