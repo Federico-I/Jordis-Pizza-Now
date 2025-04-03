@@ -27,19 +27,19 @@ function Order() {
       <div>
         <h2>Status</h2>
 
-        <div>
+        <div >
           {priority && <span>Priority</span>}
-          <span>{status} order</span>
+          <span className="rounded-full bg-green-500 px-3 py-1 text-sm font-semibold uppercase tracking-wide text-green-50">{status} order</span>
         </div>
       </div>
 
       <div className="flex flex-wrap items-center justify gap-2 bg-stone-200 px-6 py-5">
-        <p>
+        <p className="font-medium">
           {deliveryIn >= 0
             ? `Only ${calcMinutesLeft(estimatedDelivery)} minutes left 😃`
             : "Order should have arrived"}
         </p>
-        <p>(Estimated delivery: {formatDate(estimatedDelivery)})</p>
+        <p className="text-xs text-stone-500">(Estimated delivery: {formatDate(estimatedDelivery)})</p>
       </div>
 
       <div>
