@@ -1,10 +1,11 @@
 /* eslint-disable no-unused-vars */
-import React, { useReducer } from "react";
+import React from "react";
 import { configureStore } from "@reduxjs/toolkit";
+import userReducer from "./features/user/userSlice";
 
 const store = configureStore({ 
   reducer: {
-    user: useReducer,
+    user: userReducer,
     },
  });
 
