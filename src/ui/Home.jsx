@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import Button from "./Button";
 
 function Home() {
-  const username = useSelector((state) => state.user.username)
+  const username = useSelector((state) => state.user.username);
 
   return (
     <div className="my-10 text-center sm:my-16 px-4">
@@ -17,7 +17,7 @@ function Home() {
         </span>
       </h1>
 
-      {username === "" ? <CreateUser /> : <Button to="/menu" type="primary"></Button>}
+      {username === "" ? <CreateUser /> : <Button to="/menu" type="primary">{username}, continue with your order</Button>}
     </div>
   );
 }
