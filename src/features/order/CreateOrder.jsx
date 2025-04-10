@@ -58,16 +58,19 @@ function CreateOrder() {
       <Form method="POST">
         <div className="mb-5 flex gap-2 flex-col gap-2 sm:flex-row sm:items-center">
           <label className="sm:basis-40">First Name</label>
-          <input className="input" type="text" name="customer" value={username} required />
+          <input className="input" type="text" name="customer" defaultValue={username} required />
         </div>
 
         <div className="mb-5 flex gap-2 flex-col gap-2 sm:flex-row sm:items-center">
           <label className="sm:basis-40">Phone number</label>
           <div className="grow">
             <input type="tel" name="phone" required />
-            {formErrors?.phone && <p className="mt-2 rounded-md bg-red-100 p-2 text-xs text-red-700">{formErrors.phone}</p>}
+            {formErrors?.phone && ( 
+              <p className="mt-2 rounded-md bg-red-100 p-2 text-xs text-red-700">
+                {formErrors.phone}
+              </p>
+            )}
           </div>
-          
         </div>
 
         <div className="mb-5 flex gap-2 flex-col gap-2 sm:flex-row sm:items-center">
