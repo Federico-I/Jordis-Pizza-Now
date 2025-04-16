@@ -55,6 +55,7 @@ export const {
 
 export default cartSlice.reducer;
 
+export const getCart = (state) => state.cart.cart;
 
 // Not for large applications - perforamnce issues - get library "reselect"
 
