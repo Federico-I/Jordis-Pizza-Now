@@ -4,7 +4,7 @@ import LinkButton from '../../ui/LinkButton';
 import Button from '../../ui/Button';
 import CartItem from './CartItem';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCart } from './CartSlice';
+import { clearCart, getCart } from './CartSlice';
 
 const fakeCart = [
   {
@@ -36,6 +36,8 @@ function Cart() {
   const cart = useSelector(getCart);
   
   const dispatch = useDispatch();
+
+  if (!cart.length) return <EmptyCart />;
 
   return (
     <div className='px-4 py-3'>
