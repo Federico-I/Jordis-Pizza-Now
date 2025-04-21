@@ -3,6 +3,7 @@
 import React from "react";
 import { formatCurrency } from "../../utils/helpers";
 import Button from "../../ui/Button";
+import DeleteItem from "../cart/DeleteItem";
 
 function MenuItem({ pizza }) {
 
@@ -27,7 +28,10 @@ function MenuItem({ pizza }) {
         <p className="font-medium">{name}</p>
         <p className="text-sm italic text-stone-500 capitalize">{ingredients.join(', ')}</p>
         <div className="mt-auto flex items-center justify-between">
-          {!soldOut ? <p className="text-sm">{formatCurrency(unitPrice)}</p> : <p className="text-sm uppercase font-medium text-stone-600">Sold out</p>}
+          {!soldOut ? (<p className="text-sm">{formatCurrency(unitPrice)}</p>) : (<p className="text-sm uppercase font-medium text-stone-600">Sold out</p>)}
+
+          <DeleteItem pizzaId={id}/>
+
           {!soldOut && <Button type="samll" onClick={handleAddToCart}>Add to Cart</Button>}
         </div>
       </div>
