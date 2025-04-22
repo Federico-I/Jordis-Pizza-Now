@@ -13,6 +13,8 @@ function MenuItem({ pizza }) {
 
   const dispatch = useDispatch();
   const currentQuanity = useSelector(getQuantityById(id));
+
+  const InCart = currentQuanity > 0;
   
   function handleAddToCart () {
     const newItem = {
@@ -21,9 +23,9 @@ function MenuItem({ pizza }) {
         quantity: 1,
         unitPrice,
         totalPrice: unitPrice * 1,
-      };
+    };
 
-      dispatch(addItem(newItem));
+    dispatch(addItem(newItem));
   };
 
   return (
@@ -35,9 +37,9 @@ function MenuItem({ pizza }) {
         <div className="mt-auto flex items-center justify-between">
           {!soldOut ? (<p className="text-sm">{formatCurrency(unitPrice)}</p>) : (<p className="text-sm uppercase font-medium text-stone-600">Sold out</p>)}
 
-          <DeleteItem pizzaId={id}/>
+          {InCart && <DeleteItem pizzaId={id}/>}
 
-          {!soldOut && <Button type="samll" onClick={handleAddToCart}>Add to Cart</Button>}
+          {!soldOut && !InCart && <Button type="samll" onClick={handleAddToCart}>Add to Cart</Button>}
         </div>
       </div>
     </li>
