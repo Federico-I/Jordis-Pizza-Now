@@ -5,25 +5,25 @@ import { formatCurrency } from "../../utils/helpers";
 import Button from "../../ui/Button";
 import DeleteItem from "../cart/DeleteItem";
 import { useDispatch, useSelector } from "react-redux";
+import { addItem, getQuantityById } from "../cart/CartSlice";
 
 function MenuItem({ pizza }) {
 
-  const dispatch = useDispatch();
-
-  const currentQuanity = useSelector(getQuantityById());
-
   const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza;
 
+  const dispatch = useDispatch();
+  const currentQuanity = useSelector(getQuantityById(id));
+  
   function handleAddToCart () {
-    const newItem = [
-      {
+    const newItem = {
         pizzaId: id,
         name,
         quantity: 1,
         unitPrice,
         totalPrice: unitPrice * 1,
-      },
-    ]
+      };
+
+      dispatch(addItem(newItem));
   };
 
   return (
