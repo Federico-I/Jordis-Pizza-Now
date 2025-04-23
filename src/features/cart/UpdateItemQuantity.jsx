@@ -1,10 +1,14 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import Button from '../../ui/Button';
 
-function UpdateItemQuantity() {
+function UpdateItemQuantity({ pizzaId }) {
   return (
-    <div>UpdateItemQuantity</div>
-  )
-};
+   <div>
+     <Button type="round">-</Button>
+     <Button type="round">+</Button>
+   </div>
+  );
+}
 
 export default UpdateItemQuantity;
