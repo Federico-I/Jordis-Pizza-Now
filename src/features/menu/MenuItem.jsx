@@ -39,7 +39,7 @@ function MenuItem({ pizza }) {
           {!soldOut ? (<p className="text-sm">{formatCurrency(unitPrice)}</p>) : (<p className="text-sm uppercase font-medium text-stone-600">Sold out</p>)}
 
           { InCart && 
-            <div>
+            <div className="flex items-center gap-3 sm:gap-8">
               <UpdateItemQuantity pizzaId={id} currentQuantity={currentQuanity}/>
               <DeleteItem pizzaId={id}/>
             </div>
