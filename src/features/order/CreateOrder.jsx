@@ -7,7 +7,7 @@ import { Form, redirect, useActionData, useNavigation } from "react-router-dom";
 import { createOrder } from "../../services/apiRestaurant";
 import Button from "../../ui/Button";
 import { useSelector } from "react-redux";
-import { clearCart, getCart } from "../cart/CartSlice";
+import { clearCart, getCart, getCartPrice } from "../cart/CartSlice";
 import EmptyCart from "../cart/EmptyCart";
 import store from "../../store";
 
@@ -53,6 +53,7 @@ function CreateOrder() {
 
   // const [withPriority, setWithPriority] = useState(false);
   const cart = useSelector(getCart);
+  const totalPriceCart = useSelector(getCartPrice)
 
   if(!cart.length) return <EmptyCart />;
 
