@@ -53,7 +53,9 @@ function CreateOrder() {
 
   // const [withPriority, setWithPriority] = useState(false);
   const cart = useSelector(getCart);
-  const totalPriceCart = useSelector(getCartPrice)
+  const totalPriceCart = useSelector(getCartPrice);
+  const priorityPrice = 0;
+  const totalPrice = totalPriceCart + priorityPrice;
 
   if(!cart.length) return <EmptyCart />;
 
@@ -100,7 +102,7 @@ function CreateOrder() {
 
         <div>
           <input type="hidden" name="cart" value={JSON.stringify(cart)} />
-          <Button disabled={isSubmitting} type="primary">{ isSubmitting ? "Processing Order" : "Order Now"}</Button>
+          <Button disabled={isSubmitting} type="primary">{ isSubmitting ? "Processing Order" : `Order Now from ${totalPrice}`}</Button>
         </div>
       </Form>
     </div>
