@@ -58,7 +58,7 @@ function CreateOrder() {
   
   const cart = useSelector(getCart);
   const totalPriceCart = useSelector(getCartPrice);
-  const priorityPrice = 0;
+  const priorityPrice = withPriority ? totalPriceCart * 1.2 : 0;
   const totalPrice = totalPriceCart + priorityPrice;
 
   if(!cart.length) return <EmptyCart />;
@@ -121,7 +121,7 @@ export async function action ({ request }) {
   const order = {
     ...data,
     cart: JSON.parse(data.cart),
-    priority: data.priority === "",
+    priority: data.priority === "true",
   };
   
   const errors = {};
