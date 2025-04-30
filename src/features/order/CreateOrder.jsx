@@ -10,6 +10,7 @@ import { useSelector } from "react-redux";
 import { clearCart, getCart, getCartPrice } from "../cart/CartSlice";
 import EmptyCart from "../cart/EmptyCart";
 import store from "../../store";
+import { formatCurrency } from "../../utils/helpers";
 
 // https://uibakery.io/regex-library/phone-number
 const isValidPhone = (str) =>
@@ -102,7 +103,7 @@ function CreateOrder() {
 
         <div>
           <input type="hidden" name="cart" value={JSON.stringify(cart)} />
-          <Button disabled={isSubmitting} type="primary">{ isSubmitting ? "Processing Order" : `Order Now from ${totalPrice}`}</Button>
+          <Button disabled={isSubmitting} type="primary">{ isSubmitting ? "Processing Order" : `Order Now from ${formatCurrency(totalPrice)}`}</Button>
         </div>
       </Form>
     </div>
