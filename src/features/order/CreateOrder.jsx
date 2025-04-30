@@ -45,6 +45,9 @@ const fakeCart = [
 */
 
 function CreateOrder() {
+
+  const [withPriority, setWithPriority] = useState(false);
+
   const username = useSelector((state) => state.user.username);
 
   const navigation = useNavigation();
@@ -52,7 +55,7 @@ function CreateOrder() {
 
   const formErrors = useActionData();
 
-  // const [withPriority, setWithPriority] = useState(false);
+  
   const cart = useSelector(getCart);
   const totalPriceCart = useSelector(getCartPrice);
   const priorityPrice = 0;
@@ -95,8 +98,8 @@ function CreateOrder() {
             type="checkbox"
             name="priority"
             id="priority"
-            // value={withPriority}
-            // onChange={(e) => setWithPriority(e.target.checked)}
+            value={withPriority}
+            onChange={(e) => setWithPriority(e.target.checked)}
           />
           <label htmlFor="priority" className="font-medium">Want to yo give your order priority?</label>
         </div>
