@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import React from "react";
 import { getAddress } from "../../services/apiGeocoding";
 
@@ -28,7 +28,9 @@ async function fetchAddress() {
   return { position, address };
 }
 
-
+const fetchAddress = createAsyncThunk("user/fetchAddress", async function name() {
+  
+})
 
 const initialState = {
   username: "Fede",
