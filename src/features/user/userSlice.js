@@ -4,6 +4,7 @@
 import React from "react";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { getAddress } from "../../services/apiGeocoding";
+import { fetchBaseQuery } from "@reduxjs/toolkit/query";
 
 
 function getPosition() {
@@ -55,7 +56,11 @@ const userSlice = createSlice({
         state.position = action.payload.position;
         state.address = action.payload.address;
         state.state = "idle";
-      }),
+      })
+      .addCase(fetchAddress.rejected, (state, action) => {
+        state.status = "error";
+        state.error = action.error.messages;
+      })
 });
 
 export const { updateName } = userSlice.actions;
