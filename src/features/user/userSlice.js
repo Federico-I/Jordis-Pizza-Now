@@ -50,8 +50,10 @@ const userSlice = createSlice({
       fetchAddress.pending,
       (state, action) => {
         state.status = "loading" 
-      }
-    ),
+      })
+      .addCase(fetchAddress.fulfilled, (state, action) => {
+        state.state = "idle";
+      }),
 });
 
 export const { updateName } = userSlice.actions;
