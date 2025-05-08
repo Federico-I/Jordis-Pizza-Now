@@ -24,7 +24,7 @@ function CreateOrder() {
 
   const [withPriority, setWithPriority] = useState(false);
 
-  const {username, status: addressStatus, position, address}= useSelector((state) => state.user.user);
+  const {username, status: addressStatus, position, address, error: errorAddress}= useSelector((state) => state.user.user);
   const LoadingAddress = addressStatus === "loading";
 
   const navigation = useNavigation();
@@ -67,6 +67,11 @@ function CreateOrder() {
           <label className="sm:basis-40">Address</label>
           <div className="grow">
             <input className="input w-full" type="text" name="address" disabled={LoadingAddress} defaultValue={address} required />
+            {formErrors?.address && ( 
+              <p className="mt-2 rounded-md bg-red-100 p-2 text-xs text-red-700">
+                {errorAddress}
+              </p>
+            )}
           </div>
 
           {!position.latitude && !position.longitude && (
