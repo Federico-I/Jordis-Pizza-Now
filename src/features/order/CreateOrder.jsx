@@ -24,7 +24,8 @@ function CreateOrder() {
 
   const [withPriority, setWithPriority] = useState(false);
 
-  const username = useSelector((state) => state.user.username);
+  const {username, status: addressStatus, position, address}= useSelector((state) => state.user.user);
+  const LoadingAddress = addressStatus === "loading";
 
   const navigation = useNavigation();
   const isSubmitting = navigation.state === "submitting";
@@ -69,7 +70,12 @@ function CreateOrder() {
           </div>
 
           <span className="absolute right-[3px] z-50">
-            <Button type="small" onClick={() => dispatch(fetchAddress())}>Get Position</Button>
+            <Button type="small" onClick={(e) => { 
+              e.preventDefault();
+              dispatch(fetchAddress())}
+            }>
+              Get Position
+            </Button>
           </span>
         </div>
 
