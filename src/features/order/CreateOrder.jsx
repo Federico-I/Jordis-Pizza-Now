@@ -69,14 +69,16 @@ function CreateOrder() {
             <input className="input w-full" type="text" name="address" disabled={LoadingAddress} defaultValue={address} required />
           </div>
 
-          <span className="absolute right-[3px] z-50">
-            <Button disabled={LoadingAddress} type="small" onClick={(e) => { 
-              e.preventDefault();
-              dispatch(fetchAddress())}
-            }>
-              Get Position
-            </Button>
-          </span>
+          {!position.latitude && !position.longitude && (
+            <span className="absolute right-[3px] z-50">
+              <Button disabled={LoadingAddress} type="small" onClick={(e) => { 
+                e.preventDefault();
+                dispatch(fetchAddress())}
+              }>
+                Get Position
+              </Button>
+            </span>
+          )}
         </div>
 
         <div className="mb-12 flex items-center gap-5">
