@@ -100,6 +100,7 @@ function CreateOrder() {
 
         <div>
           <input type="hidden" name="cart" value={JSON.stringify(cart)} />
+          <input type="hidden" name="position" value={`${position.latitude}, ${position.longitude}`} />
           <Button disabled={isSubmitting} type="primary">{ isSubmitting ? "Processing Order" : `Order Now from ${formatCurrency(totalPrice)}`}</Button>
         </div>
       </Form>
