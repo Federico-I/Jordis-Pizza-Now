@@ -123,7 +123,7 @@ export async function action ({ request }) {
   if (!isValidPhone(order.phone))
     errors.phone = "Please enter valid phone number";
 
-  // if(Object.keys(errors).length > 0) return errors;
+  if(Object.keys(errors).length > 0) return errors;
 
   const newOrder = await createOrder(order);
 
