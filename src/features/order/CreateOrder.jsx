@@ -126,6 +126,7 @@ export async function action ({ request }) {
 
   if (Object.keys(errors).length > 0) return errors;
 
+  // create order and redirect
   const newOrder = await createOrder(order);
 
   store.dispatch(clearCart());
