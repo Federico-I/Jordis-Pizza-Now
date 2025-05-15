@@ -119,6 +119,7 @@ export async function action ({ request }) {
     priority: data.priority === "true",
   };
   
+  /*
   const errors = {};
   if (!isValidPhone(order.phone))
     errors.phone = "Please enter valid phone number";
@@ -129,7 +130,11 @@ export async function action ({ request }) {
 
   store.dispatch(clearCart());
 
-  return redirect(`/order/${newOrder.id}`)
+  return redirect(`/order/${newOrder.id}`);
+  */
+
+  return null;
+
 };
 
 export default CreateOrder;
