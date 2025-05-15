@@ -17,7 +17,7 @@ function Order() {
   const fetcher = useFetcher();
 
   useEffect(function() {
-    if (!fetcher.data && !fetcher.idle === "idle") fetcher.load("/menu");
+    if (!fetcher.data && !fetcher.state === "idle") fetcher.load("/menu");
   }, [fetcher]);
 
   // Everyone can search for all orders, so for privacy reasons we're gonna gonna exclude names or address, these are only for the restaurant staff
@@ -56,7 +56,8 @@ function Order() {
       
       <ul className="dive-stone-200 divide-y border-b border-t">
         {cart.map((item) => ( 
-          <OrderItem item={item} key={item.pizzaId} /> 
+          <OrderItem item={item} key={item.pizzaId} ingredients={fetcher.data?.find((ele) => ele.id === item.pizzaId).ingredients
+          }/> 
           ))}
       </ul>
 
