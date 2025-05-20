@@ -1,9 +1,14 @@
 import React from 'react';
 import Button from '../../ui/Button';
+import { useFetcher } from 'react-router-dom';
 
 function UpdateOrder({ order }) {
+  const fetcher = useFetcher();
+
   return (
-    <Button type="primary"></Button>
+    <fetcher.Form>
+      <Button type="primary">Priority</Button>
+    </fetcher.Form>
   )
 };
 
