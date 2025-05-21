@@ -12,6 +12,7 @@ import Order, { loader as loadOrder } from './features/order/Order';
 import Cart from './features/cart/Cart';
 import Layout from './ui/Layout';
 import Error from './ui/Error';
+import {loader as updateOrderAction} from "./features/order/UpdateOrder";
 
 const router = createBrowserRouter([
   {
