@@ -16,5 +16,6 @@ function UpdateOrder({ order }) {
 export default UpdateOrder;
 
 async function action({ request, params }) {
+  const data = { priority: true };
   return null;
 }
